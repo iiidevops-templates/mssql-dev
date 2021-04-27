@@ -1,11 +1,11 @@
 {
   "name": "Microsoft SQL Server Linux 2019",
-  "description": "Microsoft SQL Server Linux 2019 密碼一定要大小寫英數符號!!! <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/mssql-server-dev/blob/master/README.md' target='_blank'>MS SQL Server 部屬注意事項</a>",
+  "description": "Microsoft SQL Server Linux 2019 密碼一定要大小寫英數!!! <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/mssql-server-dev/blob/master/README.md' target='_blank'>MS SQL Server 部屬注意事項</a>",
   "arguments": [
     {
-      "key": "db.password",
-      "display": "DB Password",
-      "default_value": "templatePassword123!",
+      "key": "auth.saPassword",
+      "display": "DB Password for sa",
+      "default_value": "templatePassword123",
       "input_type": "password"
     }
   ]
