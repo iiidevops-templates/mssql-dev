@@ -1,11 +1,7 @@
 stages:
-- name: Deploy db
+- name: Deploy--DB(MS-SQL)
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:iii-dev-charts3-mssql-server
-      version: 0.1.0
-      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
-      targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         # Always true in this time
         db.gui: true
@@ -16,7 +12,11 @@ stages:
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
+      catalogTemplate: cattle-global-data:iii-dev-charts3-mssql-server
+      name: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-db
+      targetNamespace: ${CICD_GIT_REPO_NAME}
+      version: 0.1.0
   when:
     branch:
       include:
-        - master
+      - master
