@@ -1,5 +1,6 @@
 stages:
 - name: Deploy--DB(MS-SQL)
+  iiidevops: deployed-environments
   steps:
   - applyAppConfig:
       answers:
