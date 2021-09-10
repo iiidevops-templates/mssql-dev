@@ -4,11 +4,9 @@ stages:
   steps:
   - applyAppConfig:
       answers:
-        # Always true in this time
         db.gui: true
         auth.saPassword: templatePassword123!
         image.tag: 2019-CU10-ubuntu-20.04
-        # Common project info
         git.url: ${CICD_GIT_URL}
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
@@ -21,4 +19,3 @@ stages:
     branch:
       include:
       - master
-
