@@ -19,4 +19,4 @@ stages:
     branch:
       include:
       - skip-master
-      - master
+
