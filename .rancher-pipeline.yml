@@ -31,7 +31,7 @@ stages:
   when:
     branch:
       include:
-      - master
+      - skip-master
 - name: Deploy--Wait DB deployment
   iiidevops: deployed-environments
   steps:
@@ -48,9 +48,9 @@ stages:
       targetKey: rancher_url
     runScriptConfig:
       image: iiiorg/iiidevops-cli:0.0.1
-      shellScript: rancher login ${rancher_url} -t ${rancher_api_token} --skip-verify;
+      shellScript: rancher login ${rancher_url} -t ${rancher_api_token} --skip-verify; 
         deploy-wait.pl
   when:
     branch:
       include:
-      - master
+      - skip-master
