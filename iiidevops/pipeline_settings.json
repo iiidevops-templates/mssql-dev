@@ -5,7 +5,7 @@
     {
       "key": "auth.saPassword",
       "display": "DB Password for sa",
-      "default_value": "templatePassword123",
+      "default_value": "DevOps_123",
       "input_type": "password"
     }
   ]
